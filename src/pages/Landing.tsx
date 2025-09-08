@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Landing() {
   return (
     <section className="text-center space-y-6">
@@ -9,12 +11,12 @@ export default function Landing() {
           100 concise, 5-point items. Answer in pages of 10 with quick, tactile controls.
         </p>
         <div className="mt-6">
-          <a
-            href="/test"
+          <Link
+            to="/test"
             className="inline-flex items-center rounded-[10px] bg-[#111827] px-5 py-2.5 text-[13px] font-medium text-white shadow-sm hover:bg-black"
           >
             Start now
-          </a>
+          </Link>
       </div>
       </div>
     </section>
