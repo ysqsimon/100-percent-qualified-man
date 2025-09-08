@@ -61,7 +61,7 @@ export default function Questionnaire() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between text-[#475569]">
-        <div className="text-[12px]">Page {page + 1} / {totalPages}</div>
+        <div className="text-[12px]">第 {page + 1} / {totalPages} 页</div>
         <div className="text-[12px] font-medium">{progressPct}%</div>
       </div>
       <div className="h-2 w-full rounded-full bg-black/5">
@@ -102,17 +102,17 @@ export default function Questionnaire() {
         ))}
 
         <div className="flex items-center justify-between pt-2">
-          <button onClick={prevPage} className="rounded-[10px] border border-black/10 bg-white px-4 py-2 text-[13px] text-[#111827] hover:bg-black/5 disabled:opacity-50" disabled={page === 0}>Previous</button>
+          <button onClick={prevPage} className="rounded-[10px] border border-black/10 bg-white px-4 py-2 text-[13px] text-[#111827] hover:bg-black/5 disabled:opacity-50" disabled={page === 0}>上一页</button>
           {page < totalPages - 1 ? (
-            <button onClick={nextPage} className="rounded-[10px] bg-[#111827] px-4 py-2 text-[13px] text-white hover:bg-black">Next</button>
+            <button onClick={nextPage} className="rounded-[10px] bg-[#111827] px-4 py-2 text-[13px] text-white hover:bg-black">下一页</button>
           ) : (
-            <button onClick={submit} className="rounded-[10px] bg-[#111827] px-4 py-2 text-[13px] text-white hover:bg-black">Submit</button>
+            <button onClick={submit} className="rounded-[10px] bg-[#111827] px-4 py-2 text-[13px] text-white hover:bg-black">提交</button>
           )}
         </div>
       </div>
 
       <div className="text-center text-[12px] text-[#64748B]">
-        <Link to="/" className="hover:underline">Back to Home</Link>
+        <Link to="/" className="hover:underline">返回首页</Link>
       </div>
     </div>
   )
