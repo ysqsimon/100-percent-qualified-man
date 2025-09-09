@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom'
+import EmojiBackground from '../components/EmojiBackground'
 
 export default function Landing() {
   return (
-    <section className="text-center space-y-6">
-      <div className="mx-auto max-w-2xl">
+    <section className="relative min-h-[70vh] flex items-center justify-center text-center overflow-hidden">
+      {/* Emoji背景 - 放置在标题和描述部分后面 */}
+      <EmojiBackground />
+      {/* 内容区域 - 确保z-index高于背景 */}
+      <div className="mx-auto max-w-2xl relative z-10">
         <h1 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-[#0F172A]">
-          合格男人打分器｜女生视角严选
+          理想男友打分器｜女生视角严选
         </h1>
         <p className="mt-2 text-[14px] leading-6 text-[#475569]">
           从女生视角把恋爱“条条框框”凑成 100 道小题，每题 5 档随手一点。
